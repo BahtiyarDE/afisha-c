@@ -1,0 +1,371 @@
+.card {
+  max-width: rem(269);
+  background: #F9F6F6;
+  box-shadow: -7px -7px 20px #EFEBEB, 7px 7px 15px rgba(172, 172, 172, 0.85);
+  border-radius: rem(5);
+  // .card__image-div
+  &__image-div {
+  }
+
+  // .card__image-link
+  &__image-link {
+    width: 100%;
+    height: 184px;
+    overflow: hidden;
+  }
+  // .card__image
+  &__image {
+    width: 100%;
+    height: 100%;
+    transition: all .3s ease-in-out;
+    border-radius: rem(5);
+    @media (any-hover: hover) {
+      &:hover {
+        transform: scale(1.1)
+      }
+    }
+  }
+
+  // .card__row
+  &__row {
+    display: flex;
+    margin-left: rem(10);
+    align-items: center;
+    column-gap: rem(20);
+    margin-top: rem(20);
+    &:last-child {
+      margin-bottom: rem(18);
+    }
+  }
+
+  // .card__title
+  &__title {
+    font-weight: 600;
+    line-height: math.div(20, 16);
+  }
+
+  // .card__currency
+  &__currency {
+    font-weight: 700;
+    font-size: rem(22);
+    line-height: math.div(32, 22);
+    color: $mainRed;
+    position: relative;
+    text-decoration: underline;
+  }
+  // .card__calender
+  &__calender {
+    position: relative;
+    font-size: rem(19);
+    color: $mainRed;
+    & span {
+      position: absolute;
+      top: rem(6.5);
+      right: rem(4.5);
+      font-size: rem(10);
+      color: #000;
+    }
+  }
+  // .card__location-icon
+  &__location-icon {
+    font-size: rem(19);
+    color: $mainRed;
+  }
+
+  // .card__location
+  &__location {
+    font-size: rem(15);
+    line-height: math.div(18, 15);
+  }
+}
+//====================================================================================================
+.all {
+  // .all__container
+  &__container {
+  }
+  // .all__card
+  &__card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    @include adaptiveValue("row-gap",45 , 27);
+    @media (min-width: $mobileSmall){
+      @include adaptiveValue("column-gap",45 , 20);
+    }
+  }
+}
+
+.title {
+  font-size: rem(30);
+  font-weight: 700;
+  line-height: math.div(37, 30);
+  margin: rem(42) 0;
+  text-align: center;
+  white-space: nowrap;
+}
+//====================================================================================================
+.company {
+  // .company__container
+  &__container {
+  }
+
+  // .company__title
+  &__title {
+  }
+
+  // .company__text
+  &__text {
+    font-size: rem(21);
+    line-height: math.div(43, 21);
+    text-align: center;
+    margin-bottom: rem(196);
+    & span {
+      font-weight: 600;
+    }
+    @media (max-width:$mobile){
+      text-align: left;
+    }
+  }
+}
+//====================================================================================================
+.contact {
+  // .contact__container
+  &__container {
+  }
+
+  // .contact__title
+  &__title {
+  }
+  // .contact__column
+  &__column {
+    display: flex;
+    flex-direction: column;
+    @include adaptiveValue("row-gap",50 , 20);
+  }
+  // .contact__link-div
+  &__link-div {
+  }
+  // .contact__link
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    column-gap: rem(21);
+    &::before{
+      font-size: rem(40);
+    }
+    & > span {
+      font-weight: 700;
+      font-size: rem(20);
+      line-height: math.div(24, 20);
+      color: #000;
+    }
+  }
+}
+._icon-telegram {
+  color: #40B3E0;
+}
+
+._icon-whatsapp {
+  color: #00E676;
+}
+//====================================================================================================
+.description {
+  // .description__container
+  &__container {
+  }
+
+  // .description__title
+  &__title {
+  }
+
+  // .description__column
+  &__column {
+    display: flex;
+    flex-wrap: wrap;
+    @include adaptiveValue("column-gap", 104, 30);
+  }
+
+  // .description__img-div
+  &__img-div {
+    flex: 1 1 auto;
+  }
+
+  // .description__img
+  &__img {
+    width: 546px;
+    height: 708px;
+  }
+
+  // .description__card
+  &__card {
+  }
+
+  // .description__subtitle
+  &__subtitle {
+  }
+}
+
+.card-description {
+  background: #E9E6E6;
+  padding: rem(30) rem(257) rem(30) rem(30);
+  @include adaptiveValue("row-gap", 65, 45);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: rem(5);
+  box-shadow: -7px -7px 20px #FFFFFF, 7px 7px 15px rgba(172, 172, 172, 7);
+  // .card-description__row
+  &__row {
+    display: flex;
+    align-items: center;
+    column-gap: rem(21);
+  }
+  // .card-description__location
+  &__location {
+    color: $mainRed;
+    font-size: rem(33);
+  }
+  // .card-description__calendar
+  &__calendar {
+    font-size: rem(33);
+    position: relative;
+    color: $mainRed;
+    & span {
+      font-size: rem(22);
+      position: absolute;
+      top: rem(8);
+      right: rem(6);
+      color: #000;
+    }
+  }
+
+  // .card-description__title
+  &__title {
+    font-weight: 600;
+    font-size: rem(20);
+    line-height: math.div(24, 20);
+  }
+
+  // .card-description__currency
+  &__currency {
+    font-size: rem(32);
+    line-height: math.div(49, 32);
+    font-weight: 600;
+    color: $mainRed;
+    text-decoration: underline;
+  }
+
+  // .card-description__clock
+  &__clock {
+    color: $mainRed;
+    font-size: rem(30);
+  }
+
+  // .card-description__text
+  &__text {
+    font-size: rem(18);
+    line-height: math.div(20, 28);
+  }
+
+  // .card-description__share
+  &__share {
+    color: $mainRed;
+    font-size: rem(30);
+  }
+
+  // .card-description__eye
+  &__eye {
+    color: $mainRed;
+    font-size: rem(30);
+  }
+
+  // .card-description__watch
+  &__watch {
+  }
+
+  // .card-description__link
+  &__link {
+    padding: rem(14) rem(30);
+    border-radius: rem(17);
+    background: $mainRed;
+    font-weight: 700;
+    font-size: rem(15);
+    line-height: math.div(18, 15);
+    color: #fff;
+    transition: box-shadow 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        text-decoration: underline;
+        box-shadow: -7px -7px 20px #FFFFFF, 7px 7px 15px rgba(172, 172, 172, 7);
+      }
+    }
+  }
+}
+//====================================================================================================
+.order {
+  // .order__container
+  &__container {
+    position: relative;
+  }
+
+  // .order__title
+  &__title {
+  }
+
+  // .order__column
+  &__column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: rem(23);
+  }
+
+  // .order__row
+  &__row {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(7);
+  }
+
+  // .order__subject
+  &__subject {
+    font-weight: 600;
+    line-height: math.div(20, 16);
+    & span {
+      color: $mainRed;
+    }
+  }
+
+  // .order__input
+  &__input {
+    border: 1px solid #000000;
+    border-radius: rem(7);
+    min-width: rem(423);
+    flex: 0 0 51px;
+    padding: 0 rem(19);
+  }
+  // .order__button-div
+  &__button-div {
+    display: flex;
+    justify-content: center;
+    margin: rem(84) 0;
+  }
+  // .order__button
+  &__button {
+    padding: rem(14) rem(45);
+    text-transform: uppercase;
+    background: rgba(172, 172, 172, 0.85);
+    border-radius: rem(8);
+    font-weight: 600;
+    line-height: math.div(20, 16);
+    color: rgba(0, 0, 0, 0.51);
+    transition: all 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        color: #fff;
+        background: $mainRed;
+      }
+    }
+  }
+}
